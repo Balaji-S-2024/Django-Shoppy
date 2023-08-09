@@ -6,4 +6,9 @@ Create application
     python manage.py startapp ecommerceapp
 To run the server
     python manage.py runsever
-Set routing in urls.py
+Create an application for Authentication
+    python manage.py startapp authent
+Set routing in urls.py (In ecommerce urls, Set the routes like these)
+    URLPATTERNS                 VIEWS
+    ''                          include(ecommerce.urls) => 
+    'authent/'                  include(authent.urls)   =>

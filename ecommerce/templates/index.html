@@ -112,7 +112,7 @@
             var i = 1;
             for (var item in cart) {
               popStr = popStr + "<b>" + i + "</b>. ";
-              popStr = popStr + document.getElementById('name' + item).innerHTML.slice(0, 19) + "..." + "<b>" +cart[item][0] + "</b>"+ "Qty"  + '<br>';
+              popStr = popStr + document.getElementById('name' + item).innerHTML.slice(0, 19) + "..." + "<b>" +cart[item][0] + "</b>"+ " Qty " + "<b>" + (cart[item][2] * cart[item][0]) + "</b>" + " Price" + '<br>';
               i = i + 1;
             }
             
