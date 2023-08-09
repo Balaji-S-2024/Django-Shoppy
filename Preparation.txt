@@ -1,0 +1,9 @@
+Install Python
+Install Django
+Create Project using command
+    django-admin startproject ecommerce
+Create application
+    python manage.py startapp ecommerceapp
+To run the server
+    python manage.py runsever
+Set routing in urls.py

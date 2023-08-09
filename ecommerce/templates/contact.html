@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<h1 class="text-center">Contact US</h1>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col lg-3"></div>
+            <div class="col lg-6">
+                {% for message in messages %}
+      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong></strong>{{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+                <form action="/contact/" method="POST" class="text-center">
+                    {% csrf_token %}
+                    <label for="name">Name</label>
+                    <div class="form-group">
+                        <input type="text" class="form-cotrol p-2" name="name" id="name" required>
+                    </div>
+                    <label for="email">Email</label>
+                    <div class="form-group">
+                        <input type="email" class="form-cotrol p-2" name="email" id="email" required>
+                    </div>
+                    <label for="desc">Description</label>
+                    <div class="form-group">
+                        <textarea type="text" class="form-cotrol p-2" name="desc" id="desc" required></textarea>
+                    </div>
+                    <label for="pnumber">Description</label>
+                    <div class="form-group">
+                        <input type="number" class="form-cotrol p-2" name="pnumber" id="pnumber" required>
+                    </div>
+                    <br>
+                    <button class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+            <div class="col lg-3"></div>
+
+        </div>
+    </div>
+{% endblock body %}
